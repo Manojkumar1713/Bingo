@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bingo</title>
+    <style media="screen">
+        .cell {
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        float: left; width: 30px;
+        height: 30px;
+        }
+        .row {
+        clear: both;
+        overflow: hidden;
+        }
+        .table {
+        border-left: 1px solid #000000;
+        border-top: 1px solid #000000;
+        }
+    </style>
+    <script>
+        const roomName = "<%= roomName %>";
+    </script>
+    <script src = "/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+        <div class="table">
+            <div class="row">
+                <div class="cell" id = "10" onclick="add(this.id)"></div>
+                <div class="cell" id = "11" onclick="add(this.id)"></div>
+                <div class="cell" id = "12" onclick="add(this.id)"></div>
+                <div class="cell" id = "13" onclick="add(this.id)"></div>
+                <div class="cell" id = "14" onclick="add(this.id)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "20" onclick="add(this.id)"></div>
+                <div class="cell" id = "21" onclick="add(this.id)"></div>
+                <div class="cell" id = "22" onclick="add(this.id)"></div>
+                <div class="cell" id = "23" onclick="add(this.id)"></div>
+                <div class="cell" id = "24" onclick="add(this.id)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "30" onclick="add(this.id)"></div>
+                <div class="cell" id = "31" onclick="add(this.id)"></div>
+                <div class="cell" id = "32" onclick="add(this.id)"></div>
+                <div class="cell" id = "33" onclick="add(this.id)"></div>
+                <div class="cell" id = "34" onclick="add(this.id)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "40" onclick="add(this.id)"></div>
+                <div class="cell" id = "41" onclick="add(this.id)"></div>
+                <div class="cell" id = "42" onclick="add(this.id)"></div>
+                <div class="cell" id = "43" onclick="add(this.id)"></div>
+                <div class="cell" id = "44" onclick="add(this.id)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "50" onclick="add(this.id)"></div>
+                <div class="cell" id = "51" onclick="add(this.id)"></div>
+                <div class="cell" id = "52" onclick="add(this.id)"></div>
+                <div class="cell" id = "53" onclick="add(this.id)"></div>
+                <div class="cell" id = "54" onclick="add(this.id)"></div>
+            </div>
+        </div>
+        
+        <button onclick="game(roomName)">Start</button>
+  </body>
+</html>

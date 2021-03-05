@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bingo</title>
+    <style media="screen">
+        .cell {
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        float: left; width: 30px;
+        height: 30px;
+        }
+        .row {
+        clear: both;
+        overflow: hidden;
+        }
+        .table {
+        border-left: 1px solid #000000;
+        border-top: 1px solid #000000;
+        }
+    </style>
+    <script src = "/socket.io/socket.io.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+        <div id="name-container"></div>
+        <div class="table" id="table">
+            <div class="row">
+                <div class="cell" id = "10" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "11" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "12" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "13" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "14" onclick="game(this.id)">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "20" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "21" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "22" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "23" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "24" onclick="game(this.id)">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "30" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "31" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "32" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "33" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "34" onclick="game(this.id)">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "40" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "41" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "42" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "43" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "44" onclick="game(this.id)">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="cell" id = "50" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "51" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "52" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "53" onclick="game(this.id)">&nbsp;</div>
+                <div class="cell" id = "54" onclick="game(this.id)">&nbsp;</div>
+            </div>
+        </div>
+
+        <div id="score-container">
+
+        </div>
+  </body>
+</html>
