@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended : true }));
 
 const rooms = {}
 
+const port = process.env.PORT || 3656;
+
 app.get('/',(req,res) => {
   res.render('index',{ rooms:rooms })
 })
@@ -48,15 +50,15 @@ try{
       console.log(rooms[room])
       client.to(room).broadcast.emit("user-connected",user_name);
     })
-    
+
     client.on("send-number",(room,data)=>{
       client.to(room).broadcast.emit("receive-number",data);
     })
-    
+
     client.on("stop",(room,data)=>{
       client.to(room).broadcast.emit("Lost","Losser");
     })
-  
+
     client.on('disconnect',()=>{
       getUserRooms(client).forEach(room =>{
         client.broadcast.emit('user-disconnected', rooms[room].users[client.id]);
@@ -70,12 +72,12 @@ try{
         names.push(user_name);
       }
       return names;
-    },[])   
+    },[])
   }
 }
 catch(e){
     console.log(e);
 }
 finally{
-  server.listen(3656);
+  server.listen(port);
 }
