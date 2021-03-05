@@ -49,5 +49,5 @@ socket.on("room-created",(data)=>{
 
 function Validate(name){
     let password = prompt('ENter password');
-    window.location.assign('http://localhost:3656/'+name+' '+password);
+    window.location.assign('https://biingo-game.herokuapp.com/'+name+' '+password);
 }
